@@ -77,8 +77,77 @@ void question3()
   printf("Largest number is: %d", largest);
 }
 
+void question4()
+{
+  int num = 0;
+  while (num >= 0)
+  {
+    num += 100;
+    printf("%d", num);
+  }
+
+  //2147483596
+}
+
+void question5()
+{
+  printf("question 5");
+}
+
+void question6()
+{
+  printf("question 6");
+}
+
+void question7()
+{
+  int num1, num2, largest;
+  printf("Enter number 1: ");
+  scanf("%d", &num1);
+  printf("Enter number 2: ");
+  scanf("%d", &num2);
+
+  // printf("Num1: %d, Num2: %d", num1, num2);
+
+  if (num1 > num2)
+  {
+    largest = num1;
+  }
+  else
+  {
+    largest = num2;
+  }
+
+  printf("Largest number of the two is : %d", largest);
+}
+
+void question8()
+{
+  int num1, num2, largest;
+  printf("Enter number 1: ");
+  scanf("%d", &num1);
+  printf("Enter number 2: ");
+  scanf("%d", &num2);
+
+  largest = num1 > num2 ? num1 : num2;
+
+  printf("Largest number of the two is: %d", largest);
+}
+
+void question9()
+{
+  time_t t;
+
+  srand((unsigned)time(&t));
+
+  for (int i = 0; i < 5; i++)
+  {
+    printf("Random number %d is %d. \n", (i + 1), (rand() % 100) + 1);
+  }
+}
+
 int main(void)
 {
-  question3();
+  question9();
   return 0;
 }
