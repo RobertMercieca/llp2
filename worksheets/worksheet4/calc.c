@@ -13,8 +13,36 @@ int main(int argc, char *argv[])
 
   if (argc == 3)
   {
-    printf("Missing number\n");
-    return -1;
+    if (strcmp("+", argv[2]) != 0)
+    {
+      printf("Missing operator\n");
+      return -1;
+    }
+    else if (strcmp("-", argv[2]) != 0)
+    {
+      printf("Missing operator\n");
+      return -1;
+    }
+    else if (strcmp("/", argv[2]) != 0)
+    {
+      printf("Missing operator\n");
+      return -1;
+    }
+    else if (strcmp("*", argv[2]) != 0)
+    {
+      printf("Missing operator\n");
+      return -1;
+    }
+    else
+    {
+      printf("Unknown error occured");
+      return -1;
+    }
+    // if (isdigit(argv[2]) == 1)
+    // {
+    //   printf("Missing operator\n");
+    //   return -1;
+    // }
   }
 
   if (argc > 4)
@@ -36,6 +64,7 @@ int main(int argc, char *argv[])
 
   // printf("num 1 is: %d, num2 is: %d, operator is: %s\n", num1, num2, op);
 
+#ifdef FULL
   if (strcmp("+", op) == 0)
   {
     ans = num1 + num2;
@@ -60,6 +89,19 @@ int main(int argc, char *argv[])
   {
     printf("Invalid operator\n");
   }
+
+#else
+
+  if (strcmp("+", op) == 0)
+  {
+    ans = num1 + num2;
+    printf("%d %s %d = %d\n", num1, op, num2, ans);
+  }
+  else
+  {
+    printf("Error: Demo only supports additions\n");
+  }
+#endif
 
   return 0;
 }
