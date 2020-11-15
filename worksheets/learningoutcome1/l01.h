@@ -1,0 +1,4 @@
+bool testFunction()
+{
+  return false;
+}
